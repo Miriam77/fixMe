@@ -31,42 +31,53 @@ var adventuringParty = {
 // This function lists all characters in the party
 
 function listCharacters() {
-    console.log("Characters:" + adventuringParty.name);
-    for(var i in adventuringParty.name) {
-        var name = character.name [i];
-        console.log(" \t* " + name);
-}
+    console.log("Characters:");
+    for(var i in adventuringParty){
+       console.log("*" + adventuringParty[i].name);
+   }
 }
 
 // This function should list all weapons for the character
-//function listWeapons(character) {
-  //  console.log("Listing weapons for " + ":" + character.name);
-    //for(i in character.weapons) {
-      //  var weapon = character.weapons[i];
-        //console.log("\t * " + weapon.name);
-    //}
-//}
+function listWeapons(character) {
+    console.log("Listing weapons for " + character.name + ":");
+    for(var i in character.weapons) {
+        var weapon = character.weapons[i];
+        console.log("\t * " + weapon.name);
+    }
+}
 
 // This function should attack with the specified weapon
 // It uses the weapon damage from the object to determine the maximum damage of this weapon
-//function weaponAttack(character, weaponName) {
-  //  console.log(character.name + " attacks with his " + weaponName);
-    //var maxDamage;
-    //for(i in character.weapons) {
-      //  var weapon = character.weapons[i];
-        //if(weapon.name == weaponName.toUpperCase()) {
-          //  maxDamage = weapon.damage;
-        //}
-   // }
-    //console.log("He hits for " + Math.round( Math.random() * maxDamage ) + " damage");
-//}
+function weaponAttack(character, weaponName) {
+    console.log(adventuringParty.warrior.name + " attacks with his " + weaponName);
+    var maxDamage = adventuringParty.warrior.weapons[0].damage;
+    for(i in character.weapons) {
+        var weapon = character.weapons[i];
+        if(weapon.name == weaponName.toUpperCase()) {
+            maxDamage = weapon.damage;
+        }
+    }
+    console.log("He hits for " + Math.round( Math.random() * maxDamage ) + " damage");
+}
+
+function weaponAttack(character, weaponName) {
+    console.log(adventuringParty.wizard.name + " attacks with his " + weaponName);
+    var maxDamage = adventuringParty.wizard.weapons[0].damage;
+    for(i in character.weapons) {
+        var weapon = character.weapons[i];
+        if(weapon.name == weaponName.toUpperCase()) {
+            maxDamage = weapon.damage;
+        }
+    }
+    console.log("He hits for " + Math.round( Math.random() * maxDamage ) + " damage");
+}
 
 // Run the functions
-//listCharacters(adventuringParty);
-//listWeapons(wizard);
-//listWeapons(warrior);
-//weaponAttack("Warrior", "axe");
-//weaponAttack("Wizard", "STAFF");
+listCharacters(adventuringParty);
+listWeapons(adventuringParty.wizard);
+listWeapons(adventuringParty.warrior);
+weaponAttack("Warrior", "axe");
+weaponAttack("Wizard", "STAFF");
 
 
 
