@@ -1,6 +1,6 @@
 // You will use this Object for the answers
 // DO NOT CHANGE THIS SECTION
-var adventuringParty = {
+var adventuringParty = {    
     wizard: {
         name: "Gandalf",
         class: "Wizard",
@@ -29,59 +29,60 @@ var adventuringParty = {
 // MAKE CHANGES AFTER THIS
 
 // This function lists all characters in the party
+
 function listCharacters() {
-    console.log("Characters:");
-    for(obj in party) {
-        console.log(" * " + party[obj].name);
-    )
+    console.log("Characters:" + adventuringParty.name);
+    for(var i in adventuringParty.name) {
+        var name = character.name [i];
+        console.log(" \t* " + name);
+}
 }
 
 // This function should list all weapons for the character
-function listWeapons(character) {
-    console.log("Listing weapons for " + character.name + ":");
-    for(i in character.weapons) {
-        var weapon = character.weapons[i];
-        console.log(" * " . weapon[name]);
-    }
-}
+//function listWeapons(character) {
+  //  console.log("Listing weapons for " + ":" + character.name);
+    //for(i in character.weapons) {
+      //  var weapon = character.weapons[i];
+        //console.log("\t * " + weapon.name);
+    //}
+//}
 
 // This function should attack with the specified weapon
 // It uses the weapon damage from the object to determine the maximum damage of this weapon
-function weaponAttack(character, weaponName) {
-    console.log(character.name + " attacks with his " + weaponName);
-    var maxDamage;
-    for(i in character.weapons) {
-        var weapon = character.weapons[i];
-        if(weapon.name == weaponName.toUpperCase()) {
-            maxDamage = weapon.damage;
-        }
-    }
-    console.log("He hits for " + Math.round( Math.random() * maxDamage ) + " damage");
-}
+//function weaponAttack(character, weaponName) {
+  //  console.log(character.name + " attacks with his " + weaponName);
+    //var maxDamage;
+    //for(i in character.weapons) {
+      //  var weapon = character.weapons[i];
+        //if(weapon.name == weaponName.toUpperCase()) {
+          //  maxDamage = weapon.damage;
+        //}
+   // }
+    //console.log("He hits for " + Math.round( Math.random() * maxDamage ) + " damage");
+//}
 
 // Run the functions
-listCharacters(adventuringParty);
-listWeapons(wizard);
-listWeapons(warrior);
-weaponAttack("Warrior", "axe");
-weaponAttack("Wizard", "STAFF");
+//listCharacters(adventuringParty);
+//listWeapons(wizard);
+//listWeapons(warrior);
+//weaponAttack("Warrior", "axe");
+//weaponAttack("Wizard", "STAFF");
 
 
-/*
-EXAMPLE OUTPUT:
+
+//EXAMPLE OUTPUT:
 
 
-Characters:                                                                                                                                                                                                  
- * Gandalf                                                                                                                                                                                                   
- * Conan                                                                                                                                                                                                     
-Listing weapons for Gandalf:                                                                                                                                                                                 
- * Staff                                                                                                                                                                                                     
- * Dagger                                                                                                                                                                                                    
-Listing weapons for Conan:                                                                                                                                                                                   
- * Axe                                                                                                                                                                                                       
- * Bow                                                                                                                                                                                                       
-Conan attacks with his axe                                                                                                                                                                                   
-He hits for 17 damage                                                                                                                                                                                        
-Gandalf attacks with his STAFF                                                                                                                                                                               
-He hits for 3 damage         
- */
+//Characters:                                                                                                                                                                                                  
+ //* Gandalf                                                                                                                                                                                                   
+ //* Conan                                                                                                                                                                                                     
+//Listing weapons for Gandalf:                                                                                                                                                                                 
+ //* Staff                                                                                                                                                                                                     
+ //* Dagger                                                                                                                                                                                                    
+//Listing weapons for Conan:                                                                                                                                                                                   
+ //* Axe                                                                                                                                                                                                       
+ //* Bow                                                                                                                                                                                                       
+//Conan attacks with his axe                                                                                                                                                                                   
+//He hits for 17 damage                                                                                                                                                                                        
+//Gandalf attacks with his STAFF                                                                                                                                                                               
+//He hits for 3 damage         
